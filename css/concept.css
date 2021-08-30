@@ -38,7 +38,23 @@ body {
   overflow: hidden;
 }
 
-a:active,
+.bg_line_cp {
+  position: absolute;
+  top: 50%;
+  width: 180%;
+  border-top: 1px solid #000;
+  -webkit-transform: skewY(-45deg) translateX(100%);
+          transform: skewY(-45deg) translateX(100%);
+  z-index: -2;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.bg_line_cp.fade_in {
+  -webkit-transform: skewY(-45deg) translateX(0);
+          transform: skewY(-45deg) translateX(0);
+}
+
 a:hover,
 a:link,
 a:visited {
@@ -812,7 +828,6 @@ footer small {
 }
 
 .content_wrapper {
-  background: pink;
   width: 80%;
 }
 

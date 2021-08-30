@@ -92,6 +92,8 @@ $(function() {
     $(window).scroll();
 });
 
+
+
 $(function() {
     $(window).scroll(function() {
         $('.bg_line_03').each(function() {
@@ -114,6 +116,20 @@ $(function() {
             var windowHeight = $(window).height();
             if (scroll > position - windowHeight + 200) {
                 $(".mask_img").addClass('active');
+            }
+        });
+    });
+    $(window).scroll();
+});
+
+$(function() {
+    $(window).scroll(function() {
+        $('.bg_line_cp').each(function() {
+            var position = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > position - windowHeight + 500 ) {
+                $(this).addClass('fade_in');
             }
         });
     });
