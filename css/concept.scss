@@ -722,50 +722,72 @@ footer {
 /****************************************
 	CONCEPT
 *****************************************/
-.flowSv{
-	height: 100vh;
-	width: auto;
-	overflow: hidden;
-	background: transparent;
-	z-index: -1;
-	&_wrap{
-		animation: flowing_sv01 30s -15s linear infinite; 
-		animation: flowing_sv02 30s linear infinite; 
+// .flowSv{
+// 	height: 100vh;
+// 	width: auto;
+// 	overflow: hidden;
+// 	background: transparent;
+// 	z-index: -1;
+// 	&_wrap{
+// 		animation: flowing_sv01 30s -15s linear infinite; 
+// 		animation: flowing_sv02 30s linear infinite; 
 
-	}
-}
-@keyframes flowing_sv01 {
-	0% {
-		transform: translateY(100%)
-	}
-	100% {
-		transform: translateY(-100%);
-	}
-}
-@keyframes flowing_sv02 {
-	0% {
-		transform: translateY(0%)
-	}
-	100% {
-		transform: translateY(-200%);
-	}
-}
+// 	}
+// }
+// @keyframes flowing_sv01 {
+// 	0% {
+// 		transform: translateY(100%)
+// 	}
+// 	100% {
+// 		transform: translateY(-100%);
+// 	}
+// }
+// @keyframes flowing_sv02 {
+// 	0% {
+// 		transform: translateY(0%)
+// 	}
+// 	100% {
+// 		transform: translateY(-200%);
+// 	}
+// }
 
 .flex_box{
-  display: flex;
+display: flex;
+height: 1430px;
+border: 5px solid blue;
 }
 .content_wrapper{
   background: pink;
   width: 80%;
 }
 .text_container{
-	border: 1px solid #000;
-  width: 70%;
-  margin: auto;
-	@include mq("xs") {
-    width: 80%;
-  }
+	 	border: 1px solid #000;
+	  width: 70%;
+	   margin: auto;
+	 	@include mq("xs") {
+	     width: 80%;
+   }
+ }
+.loop{
+	border: 2px solid tomato;
+	height: 1430px;
+	width: 20%;
+	background:transparent;
+	background-image: url(../img/CONCEPT/side_view.png);
+	background-repeat: repeat-y;
+	background-position: bottom;
+	background-size: cover;
+	animation: loopY 30s linear infinite;
 }
+ 
+@keyframes loopY{
+ 	from{
+ 		background-position: top;
+ 	}
+ 	to{
+ 		background-position: 0 -1430px;
+ 	}
+ }
 
 .concept{
 &_title{

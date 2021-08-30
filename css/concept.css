@@ -803,69 +803,12 @@ footer small {
 /****************************************
 	CONCEPT
 *****************************************/
-.flowSv {
-  height: 100vh;
-  width: auto;
-  overflow: hidden;
-  background: transparent;
-  z-index: -1;
-}
-
-.flowSv_wrap {
-  -webkit-animation: flowing_sv01 30s -15s linear infinite;
-          animation: flowing_sv01 30s -15s linear infinite;
-  -webkit-animation: flowing_sv02 30s linear infinite;
-          animation: flowing_sv02 30s linear infinite;
-}
-
-@-webkit-keyframes flowing_sv01 {
-  0% {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-}
-
-@keyframes flowing_sv01 {
-  0% {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-}
-
-@-webkit-keyframes flowing_sv02 {
-  0% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-  100% {
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%);
-  }
-}
-
-@keyframes flowing_sv02 {
-  0% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-  100% {
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%);
-  }
-}
-
 .flex_box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 1430px;
+  border: 5px solid blue;
 }
 
 .content_wrapper {
@@ -882,6 +825,37 @@ footer small {
 @media screen and (max-width: 575px) {
   .text_container {
     width: 80%;
+  }
+}
+
+.loop {
+  border: 2px solid tomato;
+  height: 1430px;
+  width: 20%;
+  background: transparent;
+  background-image: url(../img/CONCEPT/side_view.png);
+  background-repeat: repeat-y;
+  background-position: bottom;
+  background-size: cover;
+  -webkit-animation: loopY 30s linear infinite;
+          animation: loopY 30s linear infinite;
+}
+
+@-webkit-keyframes loopY {
+  from {
+    background-position: top;
+  }
+  to {
+    background-position: 0 -1430px;
+  }
+}
+
+@keyframes loopY {
+  from {
+    background-position: top;
+  }
+  to {
+    background-position: 0 -1430px;
   }
 }
 
