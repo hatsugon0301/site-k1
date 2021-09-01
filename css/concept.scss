@@ -56,16 +56,19 @@ body {
 
 .bg_line_cp{
 			position: absolute;
-			top: 50%;
-			width: 180%;
+			top: 0;
+			@include mq("xs"){
+				top:40%
+			}
+			width: 100%;
 			border-top: 1px solid #000;
-			transform: skewY(-45deg) translateX(100%);
+			transform: skewY(-40deg) translateX(100%);
 			z-index: -2;
 			transition: all 1s linear;
 }
 
 .bg_line_cp.fade_in{
-	transform: skewY(-45deg) translateX(0);
+	transform: skewY(-40deg) translateX(0);
 }
 
 
@@ -769,6 +772,12 @@ footer {
 .flex_box{
 display: flex;
 height: 1430px;
+@include mq("s"){
+	height: 2565px;
+}
+@include mq("xs"){
+	height: 3200px;
+}
 border: 5px solid blue;
 }
 .content_wrapper{
@@ -786,12 +795,16 @@ border: 5px solid blue;
 .loop{
 	border: 2px solid tomato;
 	height: 1430px;
+	@include mq("s"){
+		height: 2565px;
+	}
+	@include mq("xs"){
+		height: 3200px;
+	}
 	width: 20%;
 	background:transparent;
 	background-image: url(../img/CONCEPT/side_view.png);
 	background-repeat: repeat-y;
-	background-position: bottom;
-	background-size: cover;
 	animation: loopY 30s linear infinite;
 }
  
@@ -801,6 +814,7 @@ border: 5px solid blue;
  	}
  	to{
  		background-position: 0 -1430px;
+		
  	}
  }
 
@@ -831,7 +845,6 @@ text-align: center;
   @include mq("s") {
     @include fs(36);
   }
-	
 }
 &_text{
   @include fs(12);

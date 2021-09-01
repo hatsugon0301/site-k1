@@ -488,26 +488,26 @@ header {
   position: relative;
 }
 
-.scroll:before {
-  content: '';
+.scroll_line {
   position: absolute;
-  top: 300%;
+  top: 30px;
   left: 50%;
   width: 2px;
   height: 270px;
   background: #C3C3C3;
+  overflow: hidden;
 }
 
-.scroll:after {
+.scroll_line:after {
   content: '';
   background: #000;
   position: absolute;
-  top: 250%;
-  left: 50%;
+  top: 0;
+  left: 0;
   width: 2px;
   height: 58px;
-  -webkit-animation: scroll 1.5s ease-in-out infinite;
-          animation: scroll 1.5s ease-in-out infinite;
+  -webkit-animation: scroll 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+          animation: scroll 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
 }
 
 @-webkit-keyframes scroll {
@@ -516,8 +516,8 @@ header {
             transform: translateY(0px);
   }
   50%, 100% {
-    -webkit-transform: translateY(220px);
-            transform: translateY(220px);
+    -webkit-transform: translateY(270px);
+            transform: translateY(270px);
   }
 }
 
@@ -527,8 +527,8 @@ header {
             transform: translateY(0px);
   }
   50%, 100% {
-    -webkit-transform: translateY(220px);
-            transform: translateY(220px);
+    -webkit-transform: translateY(270px);
+            transform: translateY(270px);
   }
 }
 

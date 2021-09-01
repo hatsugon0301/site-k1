@@ -40,19 +40,25 @@ body {
 
 .bg_line_cp {
   position: absolute;
-  top: 50%;
-  width: 180%;
+  top: 0;
+  width: 100%;
   border-top: 1px solid #000;
-  -webkit-transform: skewY(-45deg) translateX(100%);
-          transform: skewY(-45deg) translateX(100%);
+  -webkit-transform: skewY(-40deg) translateX(100%);
+          transform: skewY(-40deg) translateX(100%);
   z-index: -2;
   -webkit-transition: all 1s linear;
   transition: all 1s linear;
 }
 
+@media screen and (max-width: 575px) {
+  .bg_line_cp {
+    top: 40%;
+  }
+}
+
 .bg_line_cp.fade_in {
-  -webkit-transform: skewY(-45deg) translateX(0);
-          transform: skewY(-45deg) translateX(0);
+  -webkit-transform: skewY(-40deg) translateX(0);
+          transform: skewY(-40deg) translateX(0);
 }
 
 a:hover,
@@ -827,6 +833,18 @@ footer small {
   border: 5px solid blue;
 }
 
+@media screen and (max-width: 767px) {
+  .flex_box {
+    height: 2565px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .flex_box {
+    height: 3200px;
+  }
+}
+
 .content_wrapper {
   width: 80%;
 }
@@ -850,10 +868,20 @@ footer small {
   background: transparent;
   background-image: url(../img/CONCEPT/side_view.png);
   background-repeat: repeat-y;
-  background-position: bottom;
-  background-size: cover;
   -webkit-animation: loopY 30s linear infinite;
           animation: loopY 30s linear infinite;
+}
+
+@media screen and (max-width: 767px) {
+  .loop {
+    height: 2565px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .loop {
+    height: 3200px;
+  }
 }
 
 @-webkit-keyframes loopY {

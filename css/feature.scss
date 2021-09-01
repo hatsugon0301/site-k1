@@ -474,45 +474,46 @@ header{
   SCROLL
 */
 .scroll {
-	width: fit-content;
-	margin-bottom: 470px;
-	margin-top: 100px;
-	margin-right: auto;
-	margin-left: auto;
-	@include fs(10);
-	line-height: 1;
-	text-transform: uppercase;
-	position: relative;
+  width: fit-content;
+  margin-bottom: 470px;
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 10px;
+  font-size: 0.625rem;
+  line-height: 1;
+  text-transform: uppercase;
+  position: relative;
+   &_line {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    width: 2px;
+    height: 270px;
+    background: #C3C3C3;
+    overflow: hidden; 
+ }
 
-  &:before {
-	  content: '';
-	  position: absolute;
-	  top: 300%;
-	  left: 50%;
-	  width: 2px;
-	  height: 270px;
-	  background: #C3C3C3;
-	}
-
-	&:after {
-	  content: '';
-	  background: #000;
-  	  position: absolute;
-  	  top: 250%;
-  	  left: 50%;
-	  width: 2px;
-	  height: 58px;
-	  animation: scroll 1.5s ease-in-out infinite;
-	}
-	@keyframes scroll {
-	  0% {
-	    transform: translateY(0px);
-	  }
-	  50%, 100% {
-	    transform: translateY(220px);
-	  }
-	}
+&_line:after { 
+  content: '';
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 58px;
+  animation: scroll 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+ }
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0px);
+  }
+  50%, 100% {
+    transform: translateY(270px);
+  } 
+} 
 
 @include mq("s"){
 	.scroll{
