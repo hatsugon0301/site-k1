@@ -516,21 +516,24 @@ header{
 } 
 
 @include mq("s"){
-	.scroll{
+	.scroll
+	p{
 		@include fs(20);
 	}
 }
 
 @include mq("xs"){
 	.scroll{
+	p{
 		@include fs(20);
 		margin-bottom: 360px;
-		&:before {
-	  	  height: 200px;
+	}
+	&_line{
+	  	  height: 155px;
 	  	}
 
-	  	&:after {
-	  	  animation: scroll 1.5s ease-in-out infinite;
+	&_line:after {
+			animation: scroll 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
 	  	}
 	  	@keyframes scroll {
 	  	  0% {

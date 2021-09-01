@@ -533,24 +533,24 @@ header {
 }
 
 @media screen and (max-width: 767px) {
-  .scroll {
+  .scroll p {
     font-size: 20px;
     font-size: 1.25rem;
   }
 }
 
 @media screen and (max-width: 575px) {
-  .scroll {
+  .scroll p {
     font-size: 20px;
     font-size: 1.25rem;
     margin-bottom: 360px;
   }
-  .scroll:before {
-    height: 200px;
+  .scroll_line {
+    height: 155px;
   }
-  .scroll:after {
-    -webkit-animation: scroll 1.5s ease-in-out infinite;
-            animation: scroll 1.5s ease-in-out infinite;
+  .scroll_line:after {
+    -webkit-animation: scroll 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+            animation: scroll 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
   }
   @-webkit-keyframes scroll {
     0% {
