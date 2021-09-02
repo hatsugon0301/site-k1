@@ -135,3 +135,42 @@ $(function() {
     });
     $(window).scroll();
 });
+
+// feature
+$(function(){
+    $('.item_0').hover(function(){
+        $('.mask_img').hide();
+        $('.image_0').fadeIn();
+        },function(){
+            $('.mask_img').show();
+            $('.image_0').hide();
+        });    
+    $('.item_01').hover(function(){
+        $('.mask_img').hide();
+        $('.image_01').fadeIn();
+        },function(){
+            $('.mask_img').show();
+            $('.image_01').hide();
+        });    
+    $('.item_02').hover(function(){
+        $('.mask_img').hide();
+        $('.image_02').fadeIn();
+        },function(){
+            $('.mask_img').show();
+            $('.image_02').hide();
+        }); 
+    $('.item_03').hover(function(){
+        $('.mask_img').hide();
+        $('.image_03').fadeIn();
+        },function(){
+            $('.mask_img').show();
+            $('.image_03').hide();
+       });
+    $('.item_04').hover(function(){
+     $('.mask_img').hide();
+     $('.image_04').fadeIn();
+     },function(){
+          $('.mask_img').show();
+         $('.image_04').hide();
+     });                          
+});

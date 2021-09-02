@@ -1592,6 +1592,14 @@ footer {
 		}
 	}
 }
+.image_0,.image_01,.image_02,.image_03,.image_04{
+	height: 300px;
+	object-fit: contain;
+	position: absolute;
+	top:0;
+	left:0;
+	display: none;
+}
 
 .feature {
 	margin-top: 85px;
@@ -1614,11 +1622,15 @@ footer {
 			margin-right: 37px;
 			line-height: 1.0;
 			&:first-child {
+				border: 1px solid #707070;
+			}
+			&:first-child:hover {
 				border: 4px solid #707070;
 			}
 			&:last-child {
 				margin-right: 0;
 			}
+			
 			@include fs(12);
 			.text_top {
 				padding-bottom: 18px;
@@ -1659,6 +1671,8 @@ footer {
 	}
 }
 
+
+
 @include mq("s") {
 	.feature {
 		margin-top: 65px;
@@ -1672,7 +1686,7 @@ footer {
 				width: 85%;
 				max-width: 580px;
 				height: auto;
-				border: 4px solid #707070;
+				border: 1px solid #707070;
 				padding: 20px;
 				margin-bottom: 18px;
 				line-height: 1.0;

@@ -1834,6 +1834,16 @@ footer small {
   }
 }
 
+.image_0, .image_01, .image_02, .image_03, .image_04 {
+  height: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
 .feature {
   margin-top: 85px;
   margin-bottom: 135px;
@@ -1867,6 +1877,10 @@ footer small {
 }
 
 .feature_list .list_item:first-child, .feature_list .list_item_02:first-child {
+  border: 1px solid #707070;
+}
+
+.feature_list .list_item:first-child:hover, .feature_list .list_item_02:first-child:hover {
   border: 4px solid #707070;
 }
 
@@ -1938,7 +1952,7 @@ footer small {
     width: 85%;
     max-width: 580px;
     height: auto;
-    border: 4px solid #707070;
+    border: 1px solid #707070;
     padding: 20px;
     margin-bottom: 18px;
     line-height: 1.0;

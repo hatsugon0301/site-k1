@@ -1192,8 +1192,16 @@ footer{
 	.intro_li{
 		width: 165px;
 		height: 165px;
+		background-image: linear-gradient(00deg,#000,#000),
+		linear-gradient(00deg,#000,#000),linear-gradient(00deg,#000,#000),linear-gradient(00deg,#000,#000);
+		background-repeat: no-repeat;
+		background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px;
+		background-position:  right top, right bottom, left bottom, left top;
+		animation: square_anim 2s linear ;
+    animation-direction: alternate;
+	
 		padding-top: 46px;
-		border: 1px solid #000;
+		// border: 1px solid #000;
 		align-items: center;
 		text-align: center;
 		@include fs(19);
@@ -1205,6 +1213,38 @@ footer{
 		}
 	}
 }
+
+@keyframes square_anim{
+  0%{
+    background-size: 
+      2px 0, 0 2px,
+      2px 0, 0 2px; 
+  }
+  25%{
+    background-size: 
+		2px 100%, 0 2px,
+		2px 0, 0 2px;
+  }
+  50%{
+    background-size: 
+		2px 100%, 100% 2px,
+		2px 0, 0 2px;
+  }
+  75%{
+    background-size: 
+		2px 100%,100% 2px,
+		2px 100%, 0 2px;
+  }
+  100%{
+    background-size: 
+		2px 100%, 100% 2px,
+		2px 100%, 100% 2px; 
+  }
+}
+
+
+
+
 .feature_page .flow_wrap{
 	animation: flowing_02 15s linear infinite;
 	margin-bottom: 250px;
@@ -1238,6 +1278,7 @@ footer{
 			&:last-child{
 				margin-right: 0;
 			}
+			
 			@include fs(12);
 			.text_top{
 				padding-bottom: 18px;
@@ -1254,6 +1295,9 @@ footer{
 				margin-right: 0;
 			}
 		}
+	}
+	.list_item:hover,.list_item_02:hover{
+		border: 4px solid #707070;
 	}
 	&_notes{
 		margin-bottom: 30px;
@@ -1274,6 +1318,14 @@ footer{
 		@include fs(13);
 	}
 }
+// ホバーの時の記述
+
+
+
+
+
+
+//
 
 .color{
 	margin-bottom: 235px;
