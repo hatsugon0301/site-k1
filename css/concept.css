@@ -40,14 +40,14 @@ body {
 
 .bg_line_cp {
   position: absolute;
-  top: 0;
+  top: 50%;
   width: 100%;
   border-top: 1px solid #000;
   -webkit-transform: skewY(-40deg) translateX(100%);
           transform: skewY(-40deg) translateX(100%);
   z-index: -2;
-  -webkit-transition: all 1s linear;
-  transition: all 1s linear;
+  -webkit-transition: all 3s linear;
+  transition: all 3s linear;
 }
 
 @media screen and (max-width: 575px) {
@@ -829,20 +829,7 @@ footer small {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 1430px;
   border: 5px solid blue;
-}
-
-@media screen and (max-width: 767px) {
-  .flex_box {
-    height: 2565px;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .flex_box {
-    height: 3200px;
-  }
 }
 
 .content_wrapper {
@@ -863,42 +850,32 @@ footer small {
 
 .loop {
   border: 2px solid tomato;
-  height: 1430px;
   width: 20%;
+  max-width: 205px;
   background: transparent;
+  background-size: 100% 3093px;
   background-image: url(../img/CONCEPT/side_view.png);
   background-repeat: repeat-y;
+  background-position: 0 0;
   -webkit-animation: loopY 30s linear infinite;
           animation: loopY 30s linear infinite;
 }
 
-@media screen and (max-width: 767px) {
-  .loop {
-    height: 2565px;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .loop {
-    height: 3200px;
-  }
-}
-
 @-webkit-keyframes loopY {
   from {
-    background-position: top;
+    background-position: 0 0;
   }
   to {
-    background-position: 0 -1430px;
+    background-position: 0 -3093px;
   }
 }
 
 @keyframes loopY {
   from {
-    background-position: top;
+    background-position: 0 0;
   }
   to {
-    background-position: 0 -1430px;
+    background-position: 0 -3093px;
   }
 }
 

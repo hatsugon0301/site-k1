@@ -56,7 +56,8 @@ body {
 
 .bg_line_cp{
 			position: absolute;
-			top: 0;
+			top: 50%;
+			// right: 0;
 			@include mq("xs"){
 				top:40%
 			}
@@ -64,7 +65,7 @@ body {
 			border-top: 1px solid #000;
 			transform: skewY(-40deg) translateX(100%);
 			z-index: -2;
-			transition: all 1s linear;
+			transition: all 3s linear;
 }
 
 .bg_line_cp.fade_in{
@@ -771,12 +772,12 @@ footer {
 
 .flex_box{
 display: flex;
-height: 1430px;
+// height: 2860px;
 @include mq("s"){
-	height: 2565px;
+	// height: 2565px;
 }
 @include mq("xs"){
-	height: 3200px;
+	// height: 3200px;
 }
 border: 5px solid blue;
 }
@@ -794,26 +795,29 @@ border: 5px solid blue;
  }
 .loop{
 	border: 2px solid tomato;
-	height: 1430px;
+	// height: 100%;
 	@include mq("s"){
-		height: 2565px;
+		// height: 2565px;
 	}
 	@include mq("xs"){
-		height: 3200px;
+		// height: 3200px;
 	}
 	width: 20%;
+	max-width: 205px;
 	background:transparent;
+	background-size: 100% 3093px;
 	background-image: url(../img/CONCEPT/side_view.png);
 	background-repeat: repeat-y;
-	animation: loopY 30s linear infinite;
+	background-position: 0 0;
+	animation: loopY 30s linear infinite ;
 }
  
 @keyframes loopY{
  	from{
- 		background-position: top;
+ 		background-position: 0 0;
  	}
  	to{
- 		background-position: 0 -1430px;
+ 		background-position: 0 -3093px;
 		
  	}
  }

@@ -1197,11 +1197,11 @@ footer{
 		background-repeat: no-repeat;
 		background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px;
 		background-position:  right top, right bottom, left bottom, left top;
-		animation: square_anim 2s linear ;
+		animation: square_anim 3s linear ;
     animation-direction: alternate;
 	
 		padding-top: 46px;
-		// border: 1px solid #000;
+		// border: 1px solid #333;
 		align-items: center;
 		text-align: center;
 		@include fs(19);
@@ -1252,7 +1252,6 @@ footer{
 		margin: 0;
 	}
 }
-
 
 
 .feature{
@@ -1318,14 +1317,14 @@ footer{
 		@include fs(13);
 	}
 }
-// ホバーの時の記述
 
 
 
 
 
 
-//
+
+
 
 .color{
 	margin-bottom: 235px;
