@@ -515,7 +515,8 @@ header {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
-  50%, 100% {
+  50%,
+  100% {
     -webkit-transform: translateY(270px);
             transform: translateY(270px);
   }
@@ -526,7 +527,8 @@ header {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
-  50%, 100% {
+  50%,
+  100% {
     -webkit-transform: translateY(270px);
             transform: translateY(270px);
   }
@@ -557,7 +559,8 @@ header {
       -webkit-transform: translateY(0px);
               transform: translateY(0px);
     }
-    50%, 100% {
+    50%,
+    100% {
       -webkit-transform: translateY(155px);
               transform: translateY(155px);
     }
@@ -567,7 +570,8 @@ header {
       -webkit-transform: translateY(0px);
               transform: translateY(0px);
     }
-    50%, 100% {
+    50%,
+    100% {
       -webkit-transform: translateY(155px);
               transform: translateY(155px);
     }
@@ -723,13 +727,13 @@ footer small {
   width: 100%;
   height: auto;
   position: absolute;
-  top: calc( ((1240 / 1908) * 100vw) * -1);
+  top: calc(((1240 / 1908) * 100vw) * -1);
 }
 
 @-webkit-keyframes flowing_01 {
   0% {
-    -webkit-transform: translateY(calc( (1240 / 1908) * 100vw));
-            transform: translateY(calc( (1240 / 1908) * 100vw));
+    -webkit-transform: translateY(calc((1240 / 1908) * 100vw));
+            transform: translateY(calc((1240 / 1908) * 100vw));
   }
   100% {
     -webkit-transform: translateY(0);
@@ -739,8 +743,8 @@ footer small {
 
 @keyframes flowing_01 {
   0% {
-    -webkit-transform: translateY(calc( (1240 / 1908) * 100vw));
-            transform: translateY(calc( (1240 / 1908) * 100vw));
+    -webkit-transform: translateY(calc((1240 / 1908) * 100vw));
+            transform: translateY(calc((1240 / 1908) * 100vw));
   }
   100% {
     -webkit-transform: translateY(0);
@@ -803,13 +807,13 @@ footer small {
 .fv_sp .flowY .flowY_wrap {
   -webkit-animation: flowing_01_sp 10s linear infinite;
           animation: flowing_01_sp 10s linear infinite;
-  top: calc( ((2563 / 1464) * 100vw) * -1);
+  top: calc(((2563 / 1464) * 100vw) * -1);
 }
 
 @-webkit-keyframes flowing_01_sp {
   0% {
-    -webkit-transform: translateY(calc( (2563 / 1464) * 100vw));
-            transform: translateY(calc( (2563 / 1464) * 100vw));
+    -webkit-transform: translateY(calc((2563 / 1464) * 100vw));
+            transform: translateY(calc((2563 / 1464) * 100vw));
   }
   100% {
     -webkit-transform: translateY(0);
@@ -819,8 +823,8 @@ footer small {
 
 @keyframes flowing_01_sp {
   0% {
-    -webkit-transform: translateY(calc( (2563 / 1464) * 100vw));
-            transform: translateY(calc( (2563 / 1464) * 100vw));
+    -webkit-transform: translateY(calc((2563 / 1464) * 100vw));
+            transform: translateY(calc((2563 / 1464) * 100vw));
   }
   100% {
     -webkit-transform: translateY(0);
@@ -1345,8 +1349,8 @@ footer small {
   background-repeat: no-repeat;
   background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px;
   background-position: right top, right bottom, left bottom, left top;
-  -webkit-animation: square_anim 3s linear;
-          animation: square_anim 3s linear;
+  -webkit-animation: square_anim 3s linear infinite;
+          animation: square_anim 3s linear infinite;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
   padding-top: 46px;
@@ -1376,7 +1380,7 @@ footer small {
     background-size: 2px 100%, 100% 2px, 2px 0, 0 2px;
   }
   75% {
-    background-size: 2px 100%,100% 2px, 2px 100%, 0 2px;
+    background-size: 2px 100%, 100% 2px, 2px 100%, 0 2px;
   }
   100% {
     background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px;
@@ -1394,10 +1398,65 @@ footer small {
     background-size: 2px 100%, 100% 2px, 2px 0, 0 2px;
   }
   75% {
-    background-size: 2px 100%,100% 2px, 2px 100%, 0 2px;
+    background-size: 2px 100%, 100% 2px, 2px 100%, 0 2px;
   }
   100% {
     background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px;
+  }
+}
+
+.flow_bg {
+  margin-top: -100px;
+  width: 100%;
+  height: 167px;
+  background: url(../img/FEATURE/pc/img_group.png) repeat-x;
+  background-position: 0 0;
+  -webkit-animation: flow_bg 30s linear infinite;
+  animation: flow_bg 30s linear infinite;
+}
+
+@-webkit-keyframes flow_bg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1984px 0;
+  }
+}
+
+@keyframes flow_bg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1984px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .flow_bg {
+    height: 144px;
+    background: url(../img/FEATURE/sp/img_group_sp.png) repeat-x;
+    -webkit-animation: flow_bg_sp 20s linear infinite;
+            animation: flow_bg_sp 20s linear infinite;
+  }
+}
+
+@-webkit-keyframes flow_bg_sp {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1706px 0;
+  }
+}
+
+@keyframes flow_bg_sp {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1706px 0;
   }
 }
 
@@ -1409,6 +1468,292 @@ footer small {
 
 .feature_page .flow_wrap .flow_item {
   margin: 0;
+}
+
+.mask {
+  margin-top: 180px;
+  margin-bottom: 135px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 300px;
+  width: 960px;
+  position: relative;
+}
+
+.mask .mask_0 {
+  display: inline-block;
+  opacity: 0;
+  width: 195px;
+  position: absolute;
+  top: -10%;
+  left: 0;
+}
+
+.mask .mask_1 {
+  display: inline-block;
+  opacity: 0;
+  width: 320px;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 16%;
+}
+
+.mask .mask_2 {
+  display: inline-block;
+  opacity: 0;
+  width: 187px;
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  left: 33%;
+}
+
+.mask .mask_3 {
+  display: inline-block;
+  opacity: 0;
+  width: 187px;
+  z-index: -3;
+  position: absolute;
+  top: 0;
+  left: 45%;
+}
+
+.mask .mask_4 {
+  display: inline-block;
+  opacity: 0;
+  width: 187px;
+  z-index: -4;
+  position: absolute;
+  top: 0;
+  left: 57%;
+}
+
+.mask .mask_5 {
+  display: inline-block;
+  opacity: 0;
+  width: 91px;
+  z-index: -5;
+  position: absolute;
+  top: 8%;
+  left: 67%;
+}
+
+.mask .mask_6 {
+  display: inline-block;
+  opacity: 0;
+  width: 650px;
+  z-index: -5;
+  position: absolute;
+  top: 0;
+  right: 15%;
+}
+
+.mask .mask_7 {
+  display: inline-block;
+  opacity: 0;
+  width: 85px;
+  z-index: -5;
+  position: absolute;
+  top: 20%;
+  left: 76%;
+}
+
+.mask .mask_0.active {
+  -webkit-animation: mask 1.5s ease;
+          animation: mask 1.5s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mask .mask_1.active {
+  -webkit-animation: mask 1.5s ease .3s;
+          animation: mask 1.5s ease .3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mask .mask_2.active {
+  -webkit-animation: mask 1.5s ease .5s;
+          animation: mask 1.5s ease .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mask .mask_3.active {
+  -webkit-animation: mask 1.5s ease .7s;
+          animation: mask 1.5s ease .7s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mask .mask_4.active {
+  -webkit-animation: mask 1.5s ease .9s;
+          animation: mask 1.5s ease .9s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mask .mask_5.active {
+  -webkit-animation: mask_02 1.5s ease 1.5s;
+          animation: mask_02 1.5s ease 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mask .mask_6.active {
+  -webkit-animation: mask_02 1.5s ease 1.5s;
+          animation: mask_02 1.5s ease 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mask .mask_7.active {
+  -webkit-animation: mask_02 1.5s ease 1.5s;
+          animation: mask_02 1.5s ease 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes mask {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes mask {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes mask_02 {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes mask_02 {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .mask {
+    width: 760px;
+  }
+  .mask .mask_0 {
+    left: -8%;
+  }
+  .mask .mask_1 {
+    left: 12%;
+  }
+  .mask .mask_3 {
+    left: 47%;
+  }
+  .mask .mask_4 {
+    left: 59%;
+  }
+  .mask .mask_6 {
+    right: 10%;
+  }
+  .mask .mask_7 {
+    left: 78%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mask {
+    margin-top: 15.6vw;
+    margin-bottom: 14.3vw;
+    height: 39vw;
+    width: 100%;
+  }
+  .mask .mask_0 {
+    width: 25.4vw;
+    top: -5%;
+    left: -5%;
+  }
+  .mask .mask_1 {
+    width: 41.7vw;
+    left: 14%;
+  }
+  .mask .mask_2 {
+    width: 24.4vw;
+    left: 35%;
+  }
+  .mask .mask_3 {
+    width: 24.4vw;
+    left: 47%;
+  }
+  .mask .mask_4 {
+    width: 24.4vw;
+    left: 59%;
+  }
+  .mask .mask_5 {
+    width: 11.9vw;
+    top: 2%;
+    left: 70%;
+  }
+  .mask .mask_6 {
+    width: 84.7vw;
+    top: 0;
+    right: 8%;
+  }
+  .mask .mask_7 {
+    width: 11vw;
+    top: 16%;
+    left: 81%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .mask .mask_7 {
+    top: 11%;
+  }
+}
+
+.image_0,
+.image_01,
+.image_02,
+.image_03,
+.image_04 {
+  height: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
 }
 
 .feature {
@@ -1464,7 +1809,8 @@ footer small {
   margin-right: 0;
 }
 
-.feature .list_item:hover, .feature .feature_list .list_item_02:hover, .feature_list .feature .list_item_02:hover, .feature .list_item_02:hover {
+.feature .list_item:hover, .feature .feature_list .list_item_02:hover, .feature_list .feature .list_item_02:hover,
+.feature .list_item_02:hover {
   border: 4px solid #707070;
 }
 

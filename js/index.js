@@ -64,13 +64,14 @@ $(function() {
     $(window).scroll();
 });
 
+if(window.matchMedia("(max-width: 768px)").matches){
 $(function() {
     $(window).scroll(function() {
         $('.bg_line_01').each(function() {
             var position = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > position - windowHeight + 250) {
+            if (scroll > position - windowHeight + 500) {
                 $(this).addClass('fade_in');
             }
         });
@@ -84,7 +85,7 @@ $(function() {
             var position = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > position - windowHeight + 700) {
+            if (scroll > position - windowHeight + 600) {
                 $(this).addClass('fade_in');
             }
         });
@@ -100,13 +101,59 @@ $(function() {
             var position = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > position - windowHeight + 500) {
+            if (scroll > position - windowHeight + 700) {
                 $(this).addClass('fade_in');
             }
         });
     });
     $(window).scroll();
 });
+
+}else{
+    $(function() {
+        $(window).scroll(function() {
+            $('.bg_line_01').each(function() {
+                var position = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > position - windowHeight +250 ) {
+                    $(this).addClass('fade_in');
+                }
+            });
+        });
+        $(window).scroll();
+    });
+    
+    $(function() {
+        $(window).scroll(function() {
+            $('.bg_line_02').each(function() {
+                var position = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > position - windowHeight + 700) {
+                    $(this).addClass('fade_in');
+                }
+            });
+        });
+        $(window).scroll();
+    });
+    
+    
+    
+    $(function() {
+        $(window).scroll(function() {
+            $('.bg_line_03').each(function() {
+                var position = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > position - windowHeight + 500) {
+                    $(this).addClass('fade_in');
+                }
+            });
+        });
+        $(window).scroll();
+    });   
+}
 
 $(function() {
     $(window).scroll(function() {
@@ -128,7 +175,7 @@ $(function() {
             var position = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > position - windowHeight + 500 ) {
+            if (scroll > position - windowHeight + 1000 ) {
                 $(this).addClass('fade_in');
             }
         });

@@ -1143,7 +1143,7 @@ footer {
 			border-top: 1px solid #000;
 			top: 35%;
 			transform: skewY(-52deg) translateX(100%);
-			transition: all 1s ease-in-out;
+			transition: all 2s linear;
 		}
 		.bg_line_01.fade_in {
 			transform: skewY(-52deg) translateX(0);
@@ -1894,7 +1894,7 @@ section.concept {
 	margin-top: -70px;
 
 	.flow_wrap {
-		// animation: flowing_02 8s linear infinite;
+		animation: flowing_02 8s linear infinite;
 		display: flex;
 		width: calc(100% * 2);
 	}
