@@ -1,48 +1,48 @@
 //  header
 
-$(function() {
-    $('.menu').hover(function() {
-			$('.menu_lists').addClass('menu_open');
-			$('.menu_list').addClass('menu_open');
-			$('.top_nav').addClass('menu_open');
-		}
-	);
+$(function () {
+    $('.menu').hover(function () {
+        $('.menu_lists').addClass('menu_open');
+        $('.menu_list').addClass('menu_open');
+        $('.top_nav').addClass('menu_open');
+    }
+    );
 });
-$(function() {
-	$('.product_li').hide();
-    $('.sub_menu').hover(function() {
-		$('.product_li').show();
-		$('.top_nav').addClass('sub_menu_open');
-		}
-	);
+$(function () {
+    $('.product_li').hide();
+    $('.sub_menu').hover(function () {
+        $('.product_li').show();
+        $('.top_nav').addClass('sub_menu_open');
+    }
+    );
 });
-$(function() {
-    $('.sub_menu').mouseleave(function() {
-			$('.top_nav').removeClass('sub_menu_open');
-            $('.product_li').hide();
-		}
-	);
+$(function () {
+    $('.sub_menu').mouseleave(function () {
+        $('.top_nav').removeClass('sub_menu_open');
+        $('.product_li').hide();
+    }
+    );
 });
-$(function() {
-    $('.header_pc').mouseleave(function() {
-			$('.menu_lists').removeClass('menu_open');
-			$('.top_nav').removeClass('sub_menu_open');
-			$('.top_nav').removeClass('menu_open')
-            $('.product_li').hide();
-		}
-	);
+$(function () {
+    $('.header_pc').mouseleave(function () {
+        $('.menu_lists').removeClass('menu_open');
+        $('.top_nav').removeClass('sub_menu_open');
+        $('.top_nav').removeClass('menu_open')
+        $('.product_li').hide();
+    }
+    );
 });
 
-$(function() {
+$(function () {
     $('.product_li_sp').hide();
-    $('.sub_menu_sp').on('click', function() {
+    $('.sub_menu_sp').on('click', function () {
         $('.product_li_sp').slideToggle(300);
     });
 });
 
-$(function() {
+$(function () {
     $('.nav_box_sp').hide();
-    $('.burger-btn').on('click', function() {
+    $('.burger-btn').on('click', function () {
         $('.nav_box_sp').slideToggle(300);
         $('.top_nav_sp').toggleClass('sp_menu_open');
         $('.burger-btn').toggleClass('close');
@@ -50,9 +50,9 @@ $(function() {
 });
 
 // スクロールしたらfadeinする設定
-$(function() {
-    $(window).scroll(function() {
-        $('.fadein').each(function() {
+$(function () {
+    $(window).scroll(function () {
+        $('.fadein').each(function () {
             var position = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
@@ -64,69 +64,40 @@ $(function() {
     $(window).scroll();
 });
 
-if(window.matchMedia("(max-width: 768px)").matches){
-$(function() {
-    $(window).scroll(function() {
-        $('.bg_line_01').each(function() {
-            var position = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > position - windowHeight + 500) {
-                $(this).addClass('fade_in');
-            }
-        });
-    });
-    $(window).scroll();
-});
-
-$(function() {
-    $(window).scroll(function() {
-        $('.bg_line_02').each(function() {
-            var position = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > position - windowHeight + 600) {
-                $(this).addClass('fade_in');
-            }
-        });
-    });
-    $(window).scroll();
-});
-
-
-
-$(function() {
-    $(window).scroll(function() {
-        $('.bg_line_03').each(function() {
-            var position = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > position - windowHeight + 700) {
-                $(this).addClass('fade_in');
-            }
-        });
-    });
-    $(window).scroll();
-});
-
-}else{
-    $(function() {
-        $(window).scroll(function() {
-            $('.bg_line_01').each(function() {
+if (window.matchMedia("(max-width: 768px)").matches) {
+    $(function () {
+        $(window).scroll(function () {
+            $('.bg_line_01').each(function () {
                 var position = $(this).offset().top;
                 var scroll = $(window).scrollTop();
                 var windowHeight = $(window).height();
-                if (scroll > position - windowHeight +250 ) {
+                if (scroll > position - windowHeight + 500) {
                     $(this).addClass('fade_in');
                 }
             });
         });
         $(window).scroll();
     });
-    
-    $(function() {
-        $(window).scroll(function() {
-            $('.bg_line_02').each(function() {
+
+    $(function () {
+        $(window).scroll(function () {
+            $('.bg_line_02').each(function () {
+                var position = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > position - windowHeight + 600) {
+                    $(this).addClass('fade_in');
+                }
+            });
+        });
+        $(window).scroll();
+    });
+
+
+
+    $(function () {
+        $(window).scroll(function () {
+            $('.bg_line_03').each(function () {
                 var position = $(this).offset().top;
                 var scroll = $(window).scrollTop();
                 var windowHeight = $(window).height();
@@ -137,12 +108,53 @@ $(function() {
         });
         $(window).scroll();
     });
-    
-    
-    
-    $(function() {
-        $(window).scroll(function() {
-            $('.bg_line_03').each(function() {
+
+    $(function () {
+        $(window).scroll(function () {
+            $('.bg_line_cp').each(function () {
+                var position = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > position - windowHeight + 600) {
+                    $(this).addClass('fade_in');
+                }
+            });
+        });
+        $(window).scroll();
+    });
+
+} else {
+    $(function () {
+        $(window).scroll(function () {
+            $('.bg_line_01').each(function () {
+                var position = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > position - windowHeight + 250) {
+                    $(this).addClass('fade_in');
+                }
+            });
+        });
+        $(window).scroll();
+    });
+
+    $(function () {
+        $(window).scroll(function () {
+            $('.bg_line_02').each(function () {
+                var position = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > position - windowHeight + 700) {
+                    $(this).addClass('fade_in');
+                }
+            });
+        });
+        $(window).scroll();
+    });
+
+    $(function () {
+        $(window).scroll(function () {
+            $('.bg_line_03').each(function () {
                 var position = $(this).offset().top;
                 var scroll = $(window).scrollTop();
                 var windowHeight = $(window).height();
@@ -152,12 +164,27 @@ $(function() {
             });
         });
         $(window).scroll();
-    });   
+    });
+
+    $(function () {
+        $(window).scroll(function () {
+            $('.bg_line_cp').each(function () {
+                var position = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > position - windowHeight + 1200) {
+                    $(this).addClass('fade_in');
+                }
+            });
+        });
+        $(window).scroll();
+    });
+
 }
 
-$(function() {
-    $(window).scroll(function() {
-        $('.mask').each(function() {
+$(function () {
+    $(window).scroll(function () {
+        $('.mask').each(function () {
             var position = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
@@ -169,55 +196,43 @@ $(function() {
     $(window).scroll();
 });
 
-$(function() {
-    $(window).scroll(function() {
-        $('.bg_line_cp').each(function() {
-            var position = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > position - windowHeight + 1000 ) {
-                $(this).addClass('fade_in');
-            }
-        });
-    });
-    $(window).scroll();
-});
+
 
 // feature
-$(function(){
-    $('.item_0').hover(function(){
+$(function () {
+    $('.item_0').hover(function () {
         $('.mask_img').hide();
         $('.image_0').fadeIn();
-        },function(){
-            $('.mask_img').show();
-            $('.image_0').hide();
-        });    
-    $('.item_01').hover(function(){
+    }, function () {
+        $('.mask_img').show();
+        $('.image_0').hide();
+    });
+    $('.item_01').hover(function () {
         $('.mask_img').hide();
         $('.image_01').fadeIn();
-        },function(){
-            $('.mask_img').show();
-            $('.image_01').hide();
-        });    
-    $('.item_02').hover(function(){
+    }, function () {
+        $('.mask_img').show();
+        $('.image_01').hide();
+    });
+    $('.item_02').hover(function () {
         $('.mask_img').hide();
         $('.image_02').fadeIn();
-        },function(){
-            $('.mask_img').show();
-            $('.image_02').hide();
-        }); 
-    $('.item_03').hover(function(){
+    }, function () {
+        $('.mask_img').show();
+        $('.image_02').hide();
+    });
+    $('.item_03').hover(function () {
         $('.mask_img').hide();
         $('.image_03').fadeIn();
-        },function(){
-            $('.mask_img').show();
-            $('.image_03').hide();
-       });
-    $('.item_04').hover(function(){
-     $('.mask_img').hide();
-     $('.image_04').fadeIn();
-     },function(){
-          $('.mask_img').show();
-         $('.image_04').hide();
-     });                          
+    }, function () {
+        $('.mask_img').show();
+        $('.image_03').hide();
+    });
+    $('.item_04').hover(function () {
+        $('.mask_img').hide();
+        $('.image_04').fadeIn();
+    }, function () {
+        $('.mask_img').show();
+        $('.image_04').hide();
+    });
 });
