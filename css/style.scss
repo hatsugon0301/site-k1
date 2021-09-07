@@ -1143,7 +1143,7 @@ footer {
 			border-top: 1px solid #000;
 			top: 35%;
 			transform: skewY(-52deg) translateX(100%);
-			transition: all 2s linear;
+			transition: all 0.8s ease;
 		}
 		.bg_line_01.fade_in {
 			transform: skewY(-52deg) translateX(0);
@@ -1172,6 +1172,7 @@ footer {
 			border-top: 1px solid #000;
 			top: 63%;
 			transform: skewY(30deg) translateX(-100%);
+			transition: all 0.8s ease;
 		}
 		.bg_line_02.fade_in {
 			transform: skewY(30deg) translateX(0);
@@ -1185,6 +1186,7 @@ footer {
 			border-top: 1px solid #000;
 			top: 70%;
 			transform: skewY(-45deg) translateX(100%);
+			transition: all 0.8s ease;
 		}
 		.bg_line_03.fade_in {
 			transform: skewY(-45deg) translateX(0);

@@ -57,18 +57,20 @@ body {
 
 .bg_line_cp {
   position: absolute;
-  top: 70%;
-  left: 20%;
-
-  @include mq("s") {
-    top: 50%
-  }
-
+  top: 60%;
+  left: 30%;
   width: 100%;
   border-top: 1px solid #000;
   transform: skewY(-40deg) translateX(100%);
+  transition: all 2s ease-in;
+  transition-delay: 1s;
   z-index: -2;
-  transition: all 3s linear;
+  @include mq("s") {
+    top: 50%;
+    left: 20%;
+    transition: all 1s ease;
+  }
+  
 }
 
 .bg_line_cp.fade_in {
@@ -814,33 +816,37 @@ footer {
 
   &_lead {
     @include fs(34);
+    letter-spacing: 0.021em;
     line-height: 2;
     margin-bottom: 54px;
 
     @include mq("s") {
       @include fs(36);
+      margin-bottom: 80px;
     }
   }
 
   &_text {
     @include fs(12);
+    letter-spacing: 0.021em;
     line-height: 3;
     margin-bottom: 56px;
 
     @include mq("s") {
       @include fs(24);
-      line-height: 2;
+      margin-bottom: 80px;
     }
   }
 }
 
 .mascode {
   margin-bottom: 120px;
+  letter-spacing: 0.021em;
 
   @include mq("s") {
     @include fs(24);
     margin-bottom: 150px;
-    line-height: normal;
+    line-height: 3;
   }
 }
 

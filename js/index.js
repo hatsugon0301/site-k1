@@ -71,7 +71,7 @@ if (window.matchMedia("(max-width: 768px)").matches) {
                 var position = $(this).offset().top;
                 var scroll = $(window).scrollTop();
                 var windowHeight = $(window).height();
-                if (scroll > position - windowHeight + 500) {
+                if (scroll > position - windowHeight + 1000) {
                     $(this).addClass('fade_in');
                 }
             });
@@ -115,7 +115,7 @@ if (window.matchMedia("(max-width: 768px)").matches) {
                 var position = $(this).offset().top;
                 var scroll = $(window).scrollTop();
                 var windowHeight = $(window).height();
-                if (scroll > position - windowHeight + 600) {
+                if (scroll > position - windowHeight + 800) {
                     $(this).addClass('fade_in');
                 }
             });
@@ -172,7 +172,7 @@ if (window.matchMedia("(max-width: 768px)").matches) {
                 var position = $(this).offset().top;
                 var scroll = $(window).scrollTop();
                 var windowHeight = $(window).height();
-                if (scroll > position - windowHeight + 1200) {
+                if (scroll > position - windowHeight + 700) {
                     $(this).addClass('fade_in');
                 }
             });

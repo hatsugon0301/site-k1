@@ -1284,8 +1284,8 @@ footer small {
     top: 35%;
     -webkit-transform: skewY(-52deg) translateX(100%);
             transform: skewY(-52deg) translateX(100%);
-    -webkit-transition: all 2s linear;
-    transition: all 2s linear;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
   }
   .box_01 .bg_line_01.fade_in {
     -webkit-transform: skewY(-52deg) translateX(0);
@@ -1317,6 +1317,8 @@ footer small {
     top: 63%;
     -webkit-transform: skewY(30deg) translateX(-100%);
             transform: skewY(30deg) translateX(-100%);
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
   }
   .box_02 .bg_line_02.fade_in {
     -webkit-transform: skewY(30deg) translateX(0);
@@ -1330,6 +1332,8 @@ footer small {
     top: 70%;
     -webkit-transform: skewY(-45deg) translateX(100%);
             transform: skewY(-45deg) translateX(100%);
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
   }
   .box_03 .bg_line_03.fade_in {
     -webkit-transform: skewY(-45deg) translateX(0);
